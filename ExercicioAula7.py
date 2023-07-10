@@ -49,15 +49,74 @@
 # dicionario['email'].append(email)
 
 # print(dicionario)
+
 # 3. Faça um programa que leia 10 números do usuário e os coloque corretamente no dicionário D abaixo.
 # D = {'pares': [], 'impares':[]}
+# x = 0
+# dicionario = {
+#     'pares': [], 
+#     'impares':[]
+# }
+
+# while x <= 10:
+#     numero = int(input("Digite um número: "))
+#     if numero % 2 == 0:
+#         dicionario['pares'].append(numero)
+#     else :
+#         dicionario['impares'].append(numero)
+#     x = x + 1
+
+# print(dicionario)
+
 
 # 4. Faça um programa, utilizando Dicionários, que peça para o usuário inserir o nome de três produtos 
 # de mercado e seus respectivos preços e os mostre na tela.
+# x = 0
+# dicionario = {
+#     'nome': [],
+#     'preco': []
+# }
+
+# while x < 3:
+#     produto_nome = input("Digite o nome do produto: ")
+#     dicionario['nome'].append(produto_nome)
+#     produto_preco = float(input("Digite o preço: "))
+#     dicionario['preco'].append(produto_preco)
+#     x = x + 1
+
+# print("Produtos e preços inseridos:")
+# for i in range(len(dicionario['nome'])):
+#     nome = dicionario['nome'][i]
+#     preco = dicionario['preco'][i]
+#     print(f"Produto: {nome} | Preço: R${preco:.2f}")
 
 # 5. Escreva um programa que conta a quantidade de vogais em um 
 # texto e armazena tal quantidade em um dicionário, onde a 
 # chave é a vogal considerada.
+# texto = input("Digite um texto: ")
+
+# vogais = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+
+# for letra in texto:
+#     if letra.lower() in vogais:
+#         vogais[letra.lower()] += 1
+
+# print("Quantidade de vogais:")
+# for vogal, quantidade in vogais.items():
+#     print(f"{vogal}: {quantidade}")
+
+
 
 # 6. Crie um dicionário vazio semana = {} e o complete com uma chave para cada dia da semana, tendo
 #  como seu valor uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?).
+# semana = {
+#     'segunda': ['Python'],
+#     'terca': ['Métodos ágeis'],
+#     'quarta': ['Python'],
+#     'quinta': ['Python'],
+#     'sexta': [],
+#     'sabado': [],
+#     'domingo': []
+# }
+
+# print(semana)
