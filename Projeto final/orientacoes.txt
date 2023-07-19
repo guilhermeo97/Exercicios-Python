@@ -1,0 +1,33 @@
+# Na empresa em que você trabalha foi solicitada a implementação de um sistema de cadastro dos fornecedores. As informações que devem ser cadastradas são:
+
+# - Código do fornecedor;
+# - Nome do fornecedor;
+# - Telefone do fornecedor;
+# - Email do fornecedor.
+
+# Para isso, você deverá criar um script para armazenar essas informações em alguma estrutura de dados.
+
+# Também como parte do sistema de cadastro, é necessário criar uma "interface de navegação" pelo sistema, que tenha as seguintes funcionalidades:
+
+# - Permite a exibição (usando o `print`) de todas as informaçoes de contatos específicos, a partir da busca pelo código do fornecedor;
+# - Permite a remoção e adição de fornecedores à estrutura de cadastro.
+
+# Requisitos:
+
+# - Requisito #1 - Não existe um limite para fornecedores cadastrados, portanto você deverá permitir que o usuário cadastre a quantidade que desejar.
+# - Requisito #2 - Crie pelo menos uma função em seu script. Você deverá escolher pelo menos uma tarefa do seu script e implementar em uma função para chamá-la dentro da sua lógica de cadastro.
+# - Requisito #3 - Crie pelo menos uma verificação em seu código, por exemplo: Se o dicionário estiver vazio, não permita a opção remover.
+
+# Tópicos avaliados:
+
+# - Variáveis;
+# - Tipos de dados;
+# - Operadores aritméticos;
+# - I/O de dados;
+# - Expressões lógicas e condicionais;
+# - Laços de repetição;
+# - Listas e dicionários;
+# - Funções.
+
+# Entrega: 19/07/2023
+# Apresentação: 20/07/2023
