@@ -1,9 +1,23 @@
-
 def cadastrar_fornecedor(cadastro_fornecedores):
     codigo_fornecedor = str(len(cadastro_fornecedores) + 1)
-    nome_fornecedor = input("Digite o nome do fornecedor: ")
-    telefone_fornecedor = int(input("Digite o telefone do fornecedor: "))
-    email_fornecedor = input("Digite o e-mail do fornecedor: ")
+    
+    nome_fornecedor = None
+    while not nome_fornecedor:
+        nome_fornecedor = input("Digite o nome do fornecedor: ")
+        print("Nome não preenchido. Digite o nome do fornecedor.")
+    
+    telefone_fornecedor = None
+    qtd_numero_telefone = 15
+    while not telefone_fornecedor or len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
+        telefone_fornecedor = input("Digite o telefone do fornecedor (até 11 dígitos): ")
+        if len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
+            print("Telefone inválido. Digite 11 números.")
+    
+    email_fornecedor = None
+    while not email_fornecedor or "@" not in email_fornecedor or "." not in email_fornecedor:
+        email_fornecedor = input("Digite o e-mail do fornecedor: ")
+        if "@" not in email_fornecedor or "." not in email_fornecedor:
+            print("E-mail inválido. O e-mail deve conter o símbolo '@' e pelo menos um ponto '.'.")
 
     fornecedor = {
         'nome': nome_fornecedor,
