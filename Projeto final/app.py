@@ -9,9 +9,9 @@ def cadastrar_fornecedor(cadastro_fornecedores):
     telefone_fornecedor = None
     qtd_numero_telefone = 15
     while not telefone_fornecedor or len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
-        telefone_fornecedor = input("Digite o telefone do fornecedor (até 11 dígitos): ")
+        telefone_fornecedor = input("Digite o telefone do fornecedor (até, qtd_numero_telefone, dígitos): ")
         if len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
-            print("Telefone inválido. Digite 11 números.")
+            print("Telefone inválido. Digite até", qtd_numero_telefone, "números.")
     
     email_fornecedor = None
     while not email_fornecedor or "@" not in email_fornecedor or "." not in email_fornecedor:
