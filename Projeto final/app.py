@@ -4,10 +4,11 @@ def cadastrar_fornecedor(cadastro_fornecedores):
     nome_fornecedor = None
     while not nome_fornecedor:
         nome_fornecedor = input("Digite o nome do fornecedor: ")
-        print("Nome não preenchido. Digite o nome do fornecedor.")
+        if nome_fornecedor == None:    
+            print("Nome não preenchido. Digite o nome do fornecedor.")
     
     telefone_fornecedor = None
-    qtd_numero_telefone = 15
+    qtd_numero_telefone = 11
     while not telefone_fornecedor or len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
         telefone_fornecedor = input("Digite o telefone do fornecedor (até, qtd_numero_telefone, dígitos): ")
         if len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
