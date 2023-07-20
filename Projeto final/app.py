@@ -8,9 +8,15 @@ def cadastrar_fornecedor(cadastro_fornecedores):
             print("Nome não preenchido. Digite o nome do fornecedor.")
     
     telefone_fornecedor = None
+<<<<<<< HEAD
+    qtd_numero_telefone = 8
+    while not telefone_fornecedor or len(telefone_fornecedor) >= qtd_numero_telefone or not telefone_fornecedor.isdigit():
+        telefone_fornecedor = input("Digite o telefone do fornecedor (no mínimo", qtd_numero_telefone, "dígitos): ")
+=======
     qtd_numero_telefone = 11
     while not telefone_fornecedor or len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
         telefone_fornecedor = input("Digite o telefone do fornecedor (até, qtd_numero_telefone, dígitos): ")
+>>>>>>> 80643b7c2b0d65619d848f8a12626e4bb33dd901
         if len(telefone_fornecedor) != qtd_numero_telefone or not telefone_fornecedor.isdigit():
             print("Telefone inválido. Digite até", qtd_numero_telefone, "números.")
     
@@ -77,11 +83,11 @@ def logar():
 def menu():
     cadastro_fornecedores = {}
     while True:
-        print("\n---- Menu de opções ----")
-        print("1 - Cadastrar Fornecedor")
-        print("2 - Exibir Fornecedor")
-        print("3 - Remover Fornecedor")
-        print("4 - Sair")
+        print("""---- Menu de opções ----
+        1 - Cadastrar Fornecedor
+        2 - Exibir Fornecedor
+        3 - Remover Fornecedor
+        4 - Sair""")
 
         opcao = input("Digite a opção desejada: ")
 
