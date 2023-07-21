@@ -83,7 +83,133 @@
 #     7     - Gabriela  -  F   -     RP       -      8       - 7234.89
 #     8     - Hernandes -  M   -     TI       -      6       - 4234.12
 
+# def criar_dicionario_funcionarios():
+#     funcionarios = {
+#         1: {
+#             "Matricula": 1,
+#             "Nome": "Ana",
+#             "Sexo": "F",
+#             "Departamento": "TI",
+#             "TempoServiço": 7,
+#             "Salario": 3200
+#         },
+#         2: {
+#             "Matricula": 2,
+#             "Nome": "Beatriz",
+#             "Sexo": "F",
+#             "Departamento": "TI",
+#             "TempoServiço": 4,
+#             "Salario": 3720
+#         },
+#         3: {
+#             "Matricula": 3,
+#             "Nome": "Carla",
+#             "Sexo": "F",
+#             "Departamento": "TI",
+#             "TempoServiço": 1,
+#             "Salario": 2100
+#         },
+#         4: {
+#             "Matricula": 4,
+#             "Nome": "Daniela",
+#             "Sexo": "F",
+#             "Departamento": "RH",
+#             "TempoServiço": 2,
+#             "Salario": 3920
+#         },
+#         5: {
+#             "Matricula": 5,
+#             "Nome": "Emílio",
+#             "Sexo": "M",
+#             "Departamento": "RH",
+#             "TempoServiço": 7,
+#             "Salario": 4235
+#         },
+#         6: {
+#             "Matricula": 6,
+#             "Nome": "Fernando",
+#             "Sexo": "M",
+#             "Departamento": "RP",
+#             "TempoServiço": 7,
+#             "Salario": 1200
+#         },
+#         7: {
+#             "Matricula": 7,
+#             "Nome": "Gabriela",
+#             "Sexo": "F",
+#             "Departamento": "RP",
+#             "TempoServiço": 8,
+#             "Salario": 7234.89
+#         },
+#         8: {
+#             "Matricula": 8,
+#             "Nome": "Hernandes",
+#             "Sexo": "M",
+#             "Departamento": "TI",
+#             "TempoServiço": 6,
+#             "Salario": 4234.12
+#         }
+#     }
+#     return funcionarios
+
+# # Teste da função
+# dados_funcionarios = criar_dicionario_funcionarios()
+# print(dados_funcionarios)
+
+
 # 6. Com base no dicionário obtido na questão anterior, faça:
 # a) Uma função que retorne o número de homens e mulheres cadastrados;
-# b) Uma função que retorne um dicionário dos funcionários cujo tempo de serviço seja maior que 5 anos.
-# c) Uma função que receba como argumento o sexo e retorne a média salarial dos funcionários daquele sexo.
+# def contar_generos(funcionarios):
+#     num_homens = 0
+#     num_mulheres = 0
+
+#     for funcionario in funcionarios.values():
+#         if funcionario["Sexo"] == "M":
+#             num_homens += 1
+#         elif funcionario["Sexo"] == "F":
+#             num_mulheres += 1
+
+#     return num_homens, num_mulheres
+
+# # Teste da função
+# dados_funcionarios = criar_dicionario_funcionarios()
+# homens, mulheres = contar_generos(dados_funcionarios)
+# print(f"Número de homens: {homens}")
+# print(f"Número de mulheres: {mulheres}")
+
+# # b) Uma função que retorne um dicionário dos funcionários cujo tempo de serviço seja maior que 5 anos.
+# def funcionarios_tempo_servico_maior_5(funcionarios):
+#     funcionarios_maior_5_anos = {}
+
+#     for funcionario in funcionarios.values():
+#         if funcionario["TempoServiço"] > 5:
+#             funcionarios_maior_5_anos[funcionario["Matricula"]] = funcionario
+
+#     return funcionarios_maior_5_anos
+
+# # Teste da função
+# dados_funcionarios = criar_dicionario_funcionarios()
+# funcionarios_maior_5_anos = funcionarios_tempo_servico_maior_5(dados_funcionarios)
+# print(funcionarios_maior_5_anos)
+
+# # c) Uma função que receba como argumento o sexo e retorne a média salarial dos funcionários daquele sexo.
+# def media_salarial_por_sexo(funcionarios, sexo):
+#     soma_salarios = 0
+#     num_funcionarios = 0
+
+#     for funcionario in funcionarios.values():
+#         if funcionario["Sexo"] == sexo:
+#             soma_salarios += funcionario["Salario"]
+#             num_funcionarios += 1
+
+#     if num_funcionarios == 0:
+#         return 0
+#     else:
+#         media_salarial = soma_salarios / num_funcionarios
+#         return media_salarial
+
+# # Teste da função
+# dados_funcionarios = criar_dicionario_funcionarios()
+# sexo_desejado = "F"  # Pode ser "M" ou "F"
+# media_salarial = media_salarial_por_sexo(dados_funcionarios, sexo_desejado)
+# print(f"Média salarial dos funcionários do sexo {sexo_desejado}: R${media_salarial:.2f}")
